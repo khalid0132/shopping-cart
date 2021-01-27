@@ -38,10 +38,10 @@ plusButton.addEventListener('click', function(){
 });
 
 function updatedSpanText(id){
-    const total = document.getElementById(id).innerText;
-    const totalPrice= parseFloat(total);
-    const totalCost = totalPrice + 1219;
-    document.getElementById(id).innerText = totalCost;
+    const finalAdded = document.getElementById(id).innerText;
+    const finalAddedPrice= parseFloat(finalAdded);
+    const finalAddedCost = finalAddedPrice + 1219;
+    document.getElementById(id).innerText = finalAddedCost;
 }
 
 
@@ -58,28 +58,39 @@ minusButton.addEventListener('click', function(){
         document.getElementById('currentInput').value = minusItem;    
   
     // current price department here
-    const currentPrice = document.getElementById('currentPrice').innerText;
-    const presentPrice = parseFloat(currentPrice);
-    const minusPrice = presentPrice - 1219;
-    document.getElementById('currentPrice').innerText = minusPrice;
+
+    // const currentPrice = document.getElementById('currentPrice').innerText;
+    // const presentPrice = parseFloat(currentPrice);
+    // const minusPrice = presentPrice - 1219;
+    // document.getElementById('currentPrice').innerText = minusPrice;
 
        // subtotal part
-       const subtotal = document.getElementById('subtotal').innerText;
-       const subtotalPrice= parseFloat(subtotal);
-       const subtotalCost = subtotalPrice - 1219;
-       document.getElementById('subtotal').innerText = subtotalCost;
+
+    //    const subtotal = document.getElementById('subtotal').innerText;
+    //    const subtotalPrice= parseFloat(subtotal);
+    //    const subtotalCost = subtotalPrice - 1219;
+    //    document.getElementById('subtotal').innerText = subtotalCost;
    
        //Tax part
        
    
        // Total part (( We have to use a function inside))
-       const total = document.getElementById('total').innerText;
-       const totalPrice= parseFloat(total);
-       const totalCost = totalPrice - 1219;
-       document.getElementById('total').innerText = totalCost;
 
-   
+    //    const total = document.getElementById('total').innerText;
+    //    const totalPrice= parseFloat(total);
+    //    const totalCost = totalPrice - 1219;
+    //    document.getElementById('total').innerText = totalCost;
+    updatedSpanText2('currentPrice');
+    updatedSpanText2('subtotal');
+   updatedSpanText2('total');
 });
+
+function updatedSpanText2(id){
+    const finalDeducted = document.getElementById(id).innerText;
+    const finalDeductedPrice= parseFloat(finalDeducted);
+    const finalDeductedCost = finalDeductedPrice - 1219;
+    document.getElementById(id).innerText = finalDeductedCost;
+}
 
 // Casing department--------------
 // plusButton works here
