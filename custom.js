@@ -102,28 +102,36 @@ plusButtonCase.addEventListener('click', function(){
     document.getElementById('currentInputCase').value = addedItemCase;
 
     // current price department here
-    const currentPriceCase = document.getElementById('currentPriceCase').innerText;
-    const presentPriceCase = parseFloat(currentPriceCase);
-    const addedPriceCase = presentPriceCase + 59;
-    document.getElementById('currentPriceCase').innerText = addedPriceCase;
+    // const currentPriceCase = document.getElementById('currentPriceCase').innerText;
+    // const presentPriceCase = parseFloat(currentPriceCase);
+    // const addedPriceCase = presentPriceCase + 59;
+    // document.getElementById('currentPriceCase').innerText = addedPriceCase;
 
         // // subtotal part 
-        const subtotal = document.getElementById('subtotal').innerText;
-        const subtotalPrice= parseFloat(subtotal);
-        const subtotalCost = subtotalPrice + 59;
-        document.getElementById('subtotal').innerText = subtotalCost;
+        // const subtotal = document.getElementById('subtotal').innerText;
+        // const subtotalPrice= parseFloat(subtotal);
+        // const subtotalCost = subtotalPrice + 59;
+        // document.getElementById('subtotal').innerText = subtotalCost;
     
         // //Tax part
     
     
         // // Total part // Total part (( We have to use a function inside))
-        const total = document.getElementById('total').innerText;
-        const totalPrice= parseFloat(total);
-        const totalCost = totalPrice + 59;
-        document.getElementById('total').innerText = totalCost;
-
+        // const total = document.getElementById('total').innerText;
+        // const totalPrice= parseFloat(total);
+        // const totalCost = totalPrice + 59;
+        // document.getElementById('total').innerText = totalCost;
+        updatedSpanText3('currentPriceCase');
+        updatedSpanText3('subtotal');
+        updatedSpanText3('total');
 });
 
+    function updatedSpanText3(id){
+        const currentPriceCase = document.getElementById(id).innerText;
+        const presentPriceCase = parseFloat(currentPriceCase);
+        const addedPriceCase = presentPriceCase + 59;
+        document.getElementById(id).innerText = addedPriceCase;
+    }
         // minusButtonCase department
         const minusButtonCase = document.getElementById('minusButtonCase');
         minusButtonCase.addEventListener('click', function(){
@@ -135,24 +143,35 @@ plusButtonCase.addEventListener('click', function(){
            document.getElementById('currentInputCase').value = minusItemCase;
 
         // currentPriceCase starts
-            const currentPriceCase = document.getElementById('currentPriceCase').innerText;
-            const presentPriceCase = parseFloat(currentPriceCase);
-            const minusPriceCase = presentPriceCase - 59;   
-            document.getElementById('currentPriceCase').innerText = minusPriceCase;
+
+            // const currentPriceCase = document.getElementById('currentPriceCase').innerText;
+            // const presentPriceCase = parseFloat(currentPriceCase);
+            // const minusPriceCase = presentPriceCase - 59;   
+            // document.getElementById('currentPriceCase').innerText = minusPriceCase;
         
                 // // subtotal part 
-                const subtotal = document.getElementById('subtotal').innerText;
-                const subtotalPrice= parseFloat(subtotal);
-                const subtotalCost = subtotalPrice - 59;
-                document.getElementById('subtotal').innerText = subtotalCost;
+
+                // const subtotal = document.getElementById('subtotal').innerText;
+                // const subtotalPrice= parseFloat(subtotal);
+                // const subtotalCost = subtotalPrice - 59;
+                // document.getElementById('subtotal').innerText = subtotalCost;
             
                 // //Tax part
             
             
                 // // Total part // Total part (( We have to use a function inside))
-                const total = document.getElementById('total').innerText;
-                const totalPrice= parseFloat(total);
-                const totalCost = totalPrice - 59;
-                document.getElementById('total').innerText = totalCost;
+                // const total = document.getElementById('total').innerText;
+                // const totalPrice= parseFloat(total);
+                // const totalCost = totalPrice - 59;
+                // document.getElementById('total').innerText = totalCost;
+                updatedSpanText4('currentPriceCase');
+                updatedSpanText4('subtotal');
+                updatedSpanText4('total');
         
         });
+        function updatedSpanText4(id){
+               const currentPriceCase = document.getElementById(id).innerText;
+            const presentPriceCase = parseFloat(currentPriceCase);
+            const minusPriceCase = presentPriceCase - 59;   
+            document.getElementById(id).innerText = minusPriceCase;
+        }
