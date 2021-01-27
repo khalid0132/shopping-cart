@@ -8,28 +8,41 @@ plusButton.addEventListener('click', function(){
     document.getElementById('currentInput').value = addedItem;
 
     // current price department here
-    const currentPrice = document.getElementById('currentPrice').innerText;
-    const presentPrice = parseFloat(currentPrice);
-    const addedPrice = presentPrice + 1219;
-    document.getElementById('currentPrice').innerText = addedPrice;
+   
+    // const currentPrice = document.getElementById('currentPrice').innerText;
+    // const presentPrice = parseFloat(currentPrice);
+    // const addedCost = presentPrice + 1219;
+    // document.getElementById('currentPrice').innerText = addedCost;
+   
     // pricing = document.getElementById('currentPrice').innerText;
 
     // subtotal part 
-    const subtotal = document.getElementById('subtotal').innerText;
-    const subtotalPrice= parseFloat(subtotal);
-    const subtotalCost = subtotalPrice + 1219;
-    document.getElementById('subtotal').innerText = subtotalCost;
+    // const subtotal = document.getElementById('subtotal').innerText;
+    // const subtotalPrice= parseFloat(subtotal);
+    // const subtotalCost = subtotalPrice + 1219;
+    // document.getElementById('subtotal').innerText = subtotalCost;
 
     //Tax part
 
 
     // Total part // Total part (( We have to use a function inside))
-    const total = document.getElementById('total').innerText;
-    const totalPrice= parseFloat(total);
-    const totalCost = totalPrice + 1219;
-    document.getElementById('total').innerText = totalCost;
+    // const total = document.getElementById('total').innerText;
+    // const totalPrice= parseFloat(total);
+    // const totalCost = totalPrice + 1219;
+    // document.getElementById('total').innerText = totalCost;
+
+    updatedSpanText('currentPrice');
+    updatedSpanText('subtotal');
+    updatedSpanText('total');
 
 });
+
+function updatedSpanText(id){
+    const total = document.getElementById(id).innerText;
+    const totalPrice= parseFloat(total);
+    const totalCost = totalPrice + 1219;
+    document.getElementById(id).innerText = totalCost;
+}
 
 
 
