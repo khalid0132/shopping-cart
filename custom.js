@@ -170,8 +170,8 @@ plusButtonCase.addEventListener('click', function(){
         
         });
         function updatedSpanText4(id){
-               const currentPriceCase = document.getElementById(id).innerText;
-            const presentPriceCase = parseFloat(currentPriceCase);
-            const minusPriceCase = presentPriceCase - 59;   
-            document.getElementById(id).innerText = minusPriceCase;
+               const currentCase = document.getElementById(id).innerText;
+            const presentCase = parseFloat(currentCase);
+            const minusCase = presentCase - 59;   
+            document.getElementById(id).innerText = minusCase;
         }
