@@ -1,10 +1,10 @@
 // plusButton works here
 const plusButton = document.getElementById('plusButton');
 plusButton.addEventListener('click', function(){
-    const currentInput = document.getElementById('currentInput').value;
-    const currentItem = parseFloat(currentInput);
+    const currentItem = getInputNumber('currentInput');
+    // const currentInput = document.getElementById('currentInput').value;
+    // const currentItem = parseFloat(currentInput);
     const addedItem = currentItem + 1;
-    // console.log(addedItem);
     document.getElementById('currentInput').value = addedItem;
 
     // current price department here
@@ -44,16 +44,20 @@ function updatedSpanText(id){
     document.getElementById(id).innerText = finalAddedCost;
 }
 
-
+function getInputNumber(id){
+    const currentInput = document.getElementById(id).value;
+    const currentItem = parseFloat(currentInput);
+    return currentItem;
+}
 
 
 
 // minusButton works here------------------------
 const minusButton = document.getElementById('minusButton');
 minusButton.addEventListener('click', function(){
-    
-    const currentInput = document.getElementById('currentInput').value;
-    const currentItem = parseFloat(currentInput);
+   const currentItem = getInputNumber('currentInput'); 
+    // const currentInput = document.getElementById('currentInput').value;
+    // const currentItem = parseFloat(currentInput);
         const minusItem = currentItem - 1;
         document.getElementById('currentInput').value = minusItem;    
   
@@ -96,8 +100,9 @@ function updatedSpanText2(id){
 // plusButton works here
 const plusButtonCase = document.getElementById('plusButtonCase');
 plusButtonCase.addEventListener('click', function(){
-    const currentInputCase = document.getElementById('currentInputCase').value;
-    const currentItemCase = parseFloat(currentInputCase);
+    const currentItemCase = getInputNumber('currentInputCase');
+    // const currentInputCase = document.getElementById('currentInputCase').value;
+    // const currentItemCase = parseFloat(currentInputCase);
     const addedItemCase = currentItemCase + 1;
     document.getElementById('currentInputCase').value = addedItemCase;
 
@@ -136,8 +141,9 @@ plusButtonCase.addEventListener('click', function(){
         const minusButtonCase = document.getElementById('minusButtonCase');
         minusButtonCase.addEventListener('click', function(){
            
-            const currentInputCase = document.getElementById('currentInputCase').value;
-           const currentItemCase= parseFloat(currentInputCase);
+            const currentItemCase = getInputNumber('currentInputCase');
+        //     const currentInputCase = document.getElementById('currentInputCase').value;
+        //    const currentItemCase= parseFloat(currentInputCase);
            const minusItemCase = currentItemCase - 1;
            console.log(minusItemCase);
            document.getElementById('currentInputCase').value = minusItemCase;
