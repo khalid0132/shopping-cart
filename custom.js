@@ -45,9 +45,9 @@ function updatedSpanText(id){
 }
 
 function getInputNumber(id){
-    const currentInput = document.getElementById(id).value;
-    const currentItem = parseFloat(currentInput);
-    return currentItem;
+    const valuableInput = document.getElementById(id).value;
+    const valuableItem = parseFloat(valuableInput);
+    return valuableItem;
 }
 
 
